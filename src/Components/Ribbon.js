@@ -1,16 +1,10 @@
 import React from "react";
-import "../App.css";
+import GitHubForkRibbon from "react-github-fork-ribbon";
 function Ribbon() {
   return (
-    <div className="ribbon">
-      <span>
-        <p>
-          <a href="https://github.com/RahulGIT24/Weather-App-using-React" target="_blank" rel="noopener noreferrer">
-            Fork me on GitHub
-          </a>{" "}
-        </p>
-      </span>
-    </div>
+    <GitHubForkRibbon href="https://github.com/RahulGIT24/Weather-App-using-React" target="_blank" position="right">
+      Fork me on GitHub
+    </GitHubForkRibbon>
   );
 }
 

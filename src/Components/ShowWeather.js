@@ -15,12 +15,12 @@ function ShowWeather() {
       {error === true && loader === false ? <Error /> : ""}
       {loader && <Loader />}
       {error === false && loader === false ? (
-        <div className="weather my-3 flex justify-center items-center flex-col">
-          <h1 className="text-center text-4xl">
+        <div className="weather mt-3 flex justify-center items-center flex-col">
+          <h1 className="text-center text-4xl text-white">
             <b>{weather.city}</b>
           </h1>
           <section className=" body-font">
-            <div className="container px-5 py-24 mx-auto my-1">
+            <div className="container px-5 py-10 mx-auto my-1">
               <div className="flex justify-center items-center">
                 <div className="w-96 p-4 border-2 rounded-xl border-black bg-purple text-white">
                   <div className=" bg-opacity-40 rounded-lg">
