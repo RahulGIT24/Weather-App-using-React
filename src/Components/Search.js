@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 function Search() {
+  // Creating context
   const context = useContext(weatherContext);
 
   // Creating a City State
@@ -12,16 +13,22 @@ function Search() {
   // Fetching function and objects from context
   const { getWeather } = context;
 
+  // Handling event to get weather when user search for city
   const handleClick = (e) => {
     e.preventDefault();
     getWeather(city);
   };
 
+  // It will update the city when user enter
   const onChange = (e) => {
     setCity(e.target.value);
   };
 
-  
+  // Using useEffect
+  useEffect(()=>{
+    getWeather(city)
+  },['city'])
+
   return (
     <>
       <div className="search flex justify-center items-center mt-12 flex-row">

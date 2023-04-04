@@ -1,5 +1,6 @@
 import React from "react";
 import err from "../Assets/cry.gif"
+
 function NotFound() {
   return (
     <div className="err my-32 flex justify-center items-center flex-col">

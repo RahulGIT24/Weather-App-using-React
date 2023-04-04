@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import WeatherContext from "./WeatherContext";
 import secret from "../Config/config";
 function WeatherState(props) {
+
   // Error State
   const [error, setError] = useState(false);
 
   // Loader state
   const [loader, setLoader] = useState(false);
-
 
   // Defining state
   const [weather, setWeather] = useState({
