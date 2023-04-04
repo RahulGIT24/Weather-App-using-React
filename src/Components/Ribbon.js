@@ -5,7 +5,7 @@ function Ribbon() {
     <div className="ribbon">
       <span>
         <p>
-          <a href="https://stackoverflow.com/questions/43087007/react-link-vs-a-tag-and-arrow-function" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/RahulGIT24/Weather-App-using-React" target="_blank" rel="noopener noreferrer">
             Fork me on GitHub
           </a>{" "}
         </p>
