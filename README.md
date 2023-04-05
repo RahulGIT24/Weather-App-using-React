@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[Demo of Weather Station](https://rahulgit24.github.io/Weather-App-using-React/)
+
+[API Source](https://rapidapi.com/apininjas/api/weather-by-api-ninjas/)
+
+![](./src/Assets/Screenshot%20.png)
+
+### Created using React hooks like useState, useContext, useEffect and for styling I used Tailwind CSS 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +76,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Thanks for reading
