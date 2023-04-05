@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import WeatherContext from "./WeatherContext";
 import secret from "../Config/config";
 function WeatherState(props) {
-
   // Error State
   const [error, setError] = useState(false);
+
+  // FOund State
+  const [found, setFound] = useState(true);
 
   // Loader state
   const [loader, setLoader] = useState(false);
@@ -39,6 +41,13 @@ function WeatherState(props) {
 
       const res = await fetch(`${api}${city}`, options);
       const data = await res.json();
+      if (data.error) {
+        setFound(false);
+        setError(false);
+        setLoader(false);
+      }else{
+        setFound(true);
+      }
       setWeather({
         temp: data.temp,
         feels_like: data.feels_like,
@@ -59,7 +68,9 @@ function WeatherState(props) {
   };
 
   return (
-    <WeatherContext.Provider value={{ getWeather, weather, error, loader }}>
+    <WeatherContext.Provider
+      value={{ getWeather, weather, error, loader, found }}
+    >
       {props.children};
     </WeatherContext.Provider>
   );

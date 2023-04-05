@@ -3,24 +3,26 @@ import weatherContext from "../context/weather/WeatherContext";
 import Error from "./Error";
 import Loader from "./Loader";
 import Main from "../Assets/main.gif";
+import NotFound from "./NotFound";
 
 function ShowWeather() {
   const context = useContext(weatherContext);
 
   // Fetching function and objects from context
-  const { weather, error, loader } = context;
+  const { weather, error, loader,found } = context;
 
   return (
     <>
+      {found===false?<NotFound/>:""}
       {error === true && loader === false ? <Error /> : ""}
       {loader && <Loader />}
-      {error === false && loader === false ? (
+      {error === false && loader === false && found===true? (
         <div className="weather mt-3 flex justify-center items-center flex-col">
           <h1 className="text-center text-4xl text-white">
             <b>{weather.city}</b>
           </h1>
           <section className=" body-font">
-            <div className="container px-5 py-10 mx-auto my-1">
+            <div className="container px-5 py-5 mx-auto my-1">
               <div className="flex justify-center items-center">
                 <div className="w-96 p-4 border-2 rounded-xl border-black bg-purple text-white">
                   <div className=" bg-opacity-40 rounded-lg">
