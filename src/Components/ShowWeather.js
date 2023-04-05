@@ -9,14 +9,14 @@ function ShowWeather() {
   const context = useContext(weatherContext);
 
   // Fetching function and objects from context
-  const { weather, error, loader,found } = context;
+  const { weather, error, loader, found } = context;
 
   return (
     <>
-      {found===false?<NotFound/>:""}
+      {found === false && error === false && loader===false? <NotFound /> : ""}
       {error === true && loader === false ? <Error /> : ""}
       {loader && <Loader />}
-      {error === false && loader === false && found===true? (
+      {error === false && loader === false && found === true ? (
         <div className="weather mt-3 flex justify-center items-center flex-col">
           <h1 className="text-center text-4xl text-white">
             <b>{weather.city}</b>
